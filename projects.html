@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - IT Club Lenana School</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="ASSETS/images/emblem.jpeg">
+    <style>
+
+        @media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+        /* Mobile Navigation */
+nav ul {
+    display: none; /* Initially hidden on small screens */
+    flex-direction: column;
+    background: #4a4a4a; /* Dark grey */
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul.show-menu {
+    display: flex; /* Show menu when toggled */
+}
+
+.menu-toggle {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-toggle">☰</button> <!-- Toggle Button Added -->
+        <h1>Our Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="selected">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="projects-container">
+        <div class="projects-content">
+            <h2>Website Development</h2>
+            <p>Building a dynamic website for the IT Club, including front-end and back-end development.</p>
+        
+            <h2>Cybersecurity Awareness</h2>
+            <p>Workshops and campaigns to educate students on online safety and ethical hacking.</p>
+        
+            <h2>Mobile App Development</h2>
+            <p>Developing Android and iOS applications for school-related activities.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 IT Club - Lenana School. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Toggle Menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector("nav ul");
+
+            if (menuToggle && navMenu) { 
+                menuToggle.addEventListener("click", function () {
+                    navMenu.classList.toggle("show-menu");
+                });
+            }
+        });
+    </script>
+</body>
+</html>

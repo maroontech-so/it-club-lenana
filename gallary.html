@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - IT Club Lenana School</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="image/png" href="ASSETS/images/emblem.jpeg">
+</head>
+<body>
+    <header>
+        <button class="menu-toggle">☰</button>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="resourses.html">Resources</a></li>
+                <li><a href="gallery.html" class="selected">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery-container">
+        <h2>Our Gallery</h2>
+
+        <div class="filter-buttons">
+            <button class="filter" data-category="all">All</button>
+            <button class="filter" data-category="workshops">Workshops</button>
+            <button class="filter" data-category="competitions">Competitions</button>
+            <button class="filter" data-category="social">Social Events</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="social">
+                <img src="ASSETS/images/emblem.jpeg" alt="IT Club Emblem">
+                <div class="caption">IT Club Emblem</div>
+            </div>
+
+            <div class="gallery-item" data-category="workshops">
+                <img src="ASSETS/images/IMG_20240929_142154.jpg" alt="Workshop 1">
+                <div class="caption">IT Workshop Session</div>
+            </div>
+
+            <div class="gallery-item" data-category="competitions">
+                <img src="ASSETS/images/IMG_20240929_142242.jpg" alt="Competition 1">
+                <div class="caption">Coding Competition</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 IT Club - Lenana School. All rights reserved.</p>
+    </footer>
+
+    <script src="JS/gallery.js"></script>
+</body>
+</html>
